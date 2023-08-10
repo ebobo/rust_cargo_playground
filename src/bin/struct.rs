@@ -6,6 +6,16 @@ struct User {
     name: String,
     email: String,
 }
+
+impl User {
+    fn new(id: u64, name: String, email: String) -> User {
+        User {
+            id,
+            name,
+            email,
+        }
+    }
+}
 #[derive(Serialize, Deserialize, Debug)]
 struct Product {
     id: u64,
